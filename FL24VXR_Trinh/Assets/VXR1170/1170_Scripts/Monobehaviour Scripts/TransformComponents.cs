@@ -21,6 +21,8 @@ public class TransformComponents : MonoBehaviour
         {
             LookAtTarget();
         }
+
+        
     }
 
     private void MoveCube()
@@ -29,7 +31,7 @@ public class TransformComponents : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            transform.position += Vector3.forward * moveSpeed * Time.deltaTime; // Move forward
+            transform.position += Vector3.forward * moveSpeed * Time.deltaTime; // Move forward, (0,0,1)
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
@@ -63,6 +65,7 @@ public class TransformComponents : MonoBehaviour
     {
         // Scale the cube uniformly with w and s keys
         Vector3 scaleChange = new Vector3(1, 1, 1) * Time.deltaTime;
+
         if (Input.GetKey(KeyCode.W))
         {
             transform.localScale += scaleChange; // Increase size
