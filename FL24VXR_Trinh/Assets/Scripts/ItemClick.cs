@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ItemClick : MonoBehaviour
 {
+
     public static int clickCount = 0;
 
     private void OnMouseDown()
@@ -12,7 +13,7 @@ public class ItemClick : MonoBehaviour
         clickCount++;
         Transform moveLoc;
         GameObject tmp = Instantiate(this.gameObject);
-        //Destroy(tmp.GetComponent<ItemClick>());
+        Destroy(tmp.GetComponent<ItemClick>());
 
         switch (clickCount)
         {
