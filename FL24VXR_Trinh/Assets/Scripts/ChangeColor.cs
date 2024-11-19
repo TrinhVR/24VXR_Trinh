@@ -15,7 +15,7 @@ public class ChangeColor : MonoBehaviour
             Debug.LogWarning("No Renderer Component found");
         }
     }
-
+    [ContextMenu("ChangeColor")]
     public void colorChanger()
     {
         if (objectRenderer != null)
